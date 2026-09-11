@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Anggota - E-Sport</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>E-Sport Championship</h1>
+        <button type="button" class="nav-toggle-label" aria-label="Buka menu" aria-expanded="false">☰</button>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../esport/list.html">Daftar Divisi</a></li>
+                <li><a href="../esport/tambah.html">Tambah Divisi</a></li>
+                <li><a href="list.html">Daftar Anggota</a></li>
+                <li><a href="tambah.html">Tambah Anggota</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Daftar Anggota Player</h2>
+            <div class="search-box">
+                <label for="search-tabel-anggota">🔎 Cari data:</label>
+                <input type="search" id="search-tabel-anggota" data-table-search="tabel-anggota" placeholder="Cari nama player, role, atau nomor anggota..." autocomplete="off">
+            </div>
+            <div class="table-responsive">
+                <table border="1" id="tabel-anggota">
+                    <thead>
+                        <tr>
+                            <th>No. Anggota</th>
+                            <th>Nama Player</th>
+                            <th>Role / Posisi</th>
+                            <th>No. HP</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>P001</td>
+                            <td>Acesky (Rian)</td>
+                            <td>Jungler</td>
+                            <td>081211</td>
+                            <td>
+                                <button type="button">Edit</button>
+                                <button type="button" class="btn-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>P002</td>
+                            <td>Phantom (Bagus)</td>
+                            <td>Duelist</td>
+                            <td>081355</td>
+                            <td>
+                                <button type="button">Edit</button>
+                                <button type="button" class="btn-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>P003</td>
+                            <td>Viper (Denny)</td>
+                            <td>Rusher</td>
+                            <td>08144</td>
+                            <td>
+                                <button type="button">Edit</button>
+                                <button type="button" class="btn-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 E-Sport Championship &mdash; Jobsheet 5</p>
+    </footer>
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>
