@@ -4,46 +4,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>E-Sport Championship — Jobsheet 5</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f3f5f8;
+            color: #1f2937;
+        }
+
+        /* ================= HEADER ================= */
+
+        .site-header {
+            background: #1e293b;
+            border-radius: 8px;
+            min-height: 192px;
+            padding: 32px 25px;
+            position: relative;
+        }
+
+        .site-header h1 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 38px;
+            margin: 0 0 55px 0;
+            font-weight: 700;
+        }
+
+        /* ================= HAMBURGER ================= */
+
+        .nav-toggle {
+            position: absolute;
+            left: 26px;
+            bottom: 54px;
+
+            width: 46px;
+            height: 43px;
+
+            border: none;
+            border-radius: 5px;
+
+            background: #0796d7;
+            color: white;
+
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .nav-toggle:hover {
+            background: #087fb5;
+        }
+
+        /* ================= NAVIGATION ================= */
+
+        #nav-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        #nav-menu a {
+            color: #10aef0;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #nav-menu a:hover {
+            color: #ffffff;
+        }
+
+        /* ================= STATISTICS ================= */
+
+        main {
+            margin-top: 22px;
+        }
+
+        .statistics {
+            background: #ffffff;
+            border-radius: 8px;
+            min-height: 164px;
+
+            padding: 38px 22px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 22px;
+
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .statistics h2 {
+            margin: 5px 0 0 0;
+            font-size: 28px;
+            color: #27364a;
+        }
+
+        /* ================= STAT CARD ================= */
+
+        .stat-card {
+            background: #f8fafc;
+
+            border: 1px solid #dce5ef;
+            border-left: 5px solid #0796d7;
+
+            border-radius: 6px;
+
+            padding: 20px 18px;
+        }
+
+        .stat-card span {
+            display: block;
+
+            color: #63758c;
+
+            font-size: 15px;
+            font-weight: bold;
+
+            margin-bottom: 10px;
+        }
+
+        .stat-card strong {
+            display: block;
+
+            color: #0b1930;
+
+            font-size: 28px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+
+            margin-top: 35px;
+
+            color: #58708d;
+
+            font-size: 15px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+
+            #nav-menu {
+                gap: 20px;
+            }
+
+            #nav-menu a {
+                font-size: 16px;
+            }
+
+            .statistics {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .site-header {
+                min-height: auto;
+                padding: 25px 15px;
+            }
+
+            .site-header h1 {
+                font-size: 28px;
+                margin-bottom: 25px;
+            }
+
+            .nav-toggle {
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            #nav-menu {
+                display: none;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            #nav-menu.nav-open {
+                display: flex;
+            }
+
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header class="site-header">
 
         <h1>E-Sport Championship</h1>
 
-        <button id="nav-toggle" class="nav-toggle" type="button">
+        <!-- Tombol Hamburger -->
+        <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Buka menu">
             ☰
         </button>
 
+        <!-- Menu Navigasi -->
         <nav id="nav-menu">
-            <a href="index.html">Beranda</a>
-            <a href="esport/list.html">Daftar Divisi</a>
-            <a href="esport/tambah.html">Tambah Divisi</a>
-            <a href="anggota/list.html">Daftar Anggota</a>
-            <a href="anggota/tambah.html">Tambah Anggota</a>
+
+            <a href="index.html">
+                Beranda
+            </a>
+
+            <a href="esport/list.html">
+                Daftar Divisi
+            </a>
+
+            <a href="esport/tambah.html">
+                Tambah Divisi
+            </a>
+
+            <a href="anggota/list.html">
+                Daftar Anggota
+            </a>
+
+            <a href="anggota/tambah.html">
+                Tambah Anggota
+            </a>
+
         </nav>
 
     </header>
 
 
+    <!-- ISI -->
     <main>
 
         <section class="statistics">
 
-            <h2>Ringkasan Statistik</h2>
+            <h2>
+                Ringkasan Statistik
+            </h2>
 
             <div class="stat-card">
-                <span>TOTAL DIVISI GAME</span>
-                <strong>4 Divisi</strong>
+
+                <span>
+                    TOTAL DIVISI GAME
+                </span>
+
+                <strong>
+                    4 Divisi
+                </strong>
+
             </div>
 
+
             <div class="stat-card">
-                <span>TOTAL ANGGOTA PLAYER</span>
-                <strong>20 Player</strong>
+
+                <span>
+                    TOTAL ANGGOTA PLAYER
+                </span>
+
+                <strong>
+                    20 Player
+                </strong>
+
             </div>
 
         </section>
@@ -51,12 +284,27 @@
     </main>
 
 
+    <!-- FOOTER -->
     <footer>
+
         © 2026 E-Sport Championship — Jobsheet 5
+
     </footer>
 
 
-    <script src="assets/js/app.js"></script>
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const navToggle = document.getElementById("nav-toggle");
+        const navMenu = document.getElementById("nav-menu");
+
+        navToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("nav-open");
+
+        });
+
+    </script>
 
 </body>
 
