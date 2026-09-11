@@ -1,0 +1,32 @@
+:root {
+    --brand-navy: #1e293b;
+    --brand-cyan: #38bdf8;
+    --brand-blue: #0284c7;
+}
+
+.navbar {
+    background-color: var(--brand-navy) !important;
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--brand-cyan) !important;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+}
+
+.stat-card {
+    border-left: 4px solid var(--brand-blue);
+}
+
+.btn-primary {
+    background-color: var(--brand-blue);
+    border-color: var(--brand-blue);
+}
+
+.btn-primary:hover {
+    background-color: #0369a1;
+    border-color: #0369a1;
+}
