@@ -22,20 +22,19 @@
 
         /* ================= HEADER ================= */
 
-        .site-header {
+        header {
             background: #1e293b;
+            color: white;
+            padding: 30px 25px;
             border-radius: 8px;
-            min-height: 192px;
-            padding: 32px 25px;
+            margin-bottom: 22px;
             position: relative;
         }
 
-        .site-header h1 {
+        header h1 {
             text-align: center;
-            color: #ffffff;
             font-size: 38px;
-            margin: 0 0 55px 0;
-            font-weight: 700;
+            margin: 0 0 50px;
         }
 
         /* ================= HAMBURGER ================= */
@@ -62,55 +61,55 @@
             background: #087fb5;
         }
 
-        /* ================= NAVIGATION ================= */
+        /* ================= NAVBAR ================= */
 
-        #nav-menu {
+        nav ul {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 40px;
+
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        #nav-menu a {
+        nav a {
             color: #10aef0;
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
         }
 
-        #nav-menu a:hover {
-            color: #ffffff;
+        nav a:hover {
+            color: white;
         }
 
-        /* ================= STATISTICS ================= */
+        /* ================= MAIN ================= */
 
         main {
-            margin-top: 22px;
-        }
-
-        .statistics {
-            background: #ffffff;
+            background: white;
             border-radius: 8px;
-            min-height: 164px;
-
             padding: 38px 22px;
-
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 22px;
 
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
         }
 
-        .statistics h2 {
-            margin: 5px 0 0 0;
+        #ringkasan {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 22px;
+        }
+
+        #ringkasan h2 {
+            margin: 5px 0;
             font-size: 28px;
             color: #27364a;
         }
 
-        /* ================= STAT CARD ================= */
+        /* ================= STATISTIK ================= */
 
-        .stat-card {
+        #ringkasan article {
             background: #f8fafc;
 
             border: 1px solid #dce5ef;
@@ -121,23 +120,22 @@
             padding: 20px 18px;
         }
 
-        .stat-card span {
-            display: block;
-
+        #ringkasan article h3 {
             color: #63758c;
 
             font-size: 15px;
-            font-weight: bold;
+            text-transform: uppercase;
 
-            margin-bottom: 10px;
+            margin: 0 0 10px;
         }
 
-        .stat-card strong {
-            display: block;
-
+        #ringkasan article p {
             color: #0b1930;
 
             font-size: 28px;
+            font-weight: bold;
+
+            margin: 0;
         }
 
         /* ================= FOOTER ================= */
@@ -152,19 +150,19 @@
             font-size: 15px;
         }
 
-        /* ================= RESPONSIVE ================= */
+        /* ================= MOBILE ================= */
 
         @media (max-width: 900px) {
 
-            #nav-menu {
+            nav ul {
                 gap: 20px;
             }
 
-            #nav-menu a {
+            nav a {
                 font-size: 16px;
             }
 
-            .statistics {
+            #ringkasan {
                 grid-template-columns: 1fr;
             }
 
@@ -176,12 +174,11 @@
                 padding: 10px;
             }
 
-            .site-header {
-                min-height: auto;
+            header {
                 padding: 25px 15px;
             }
 
-            .site-header h1 {
+            header h1 {
                 font-size: 28px;
                 margin-bottom: 25px;
             }
@@ -191,13 +188,13 @@
                 margin-bottom: 20px;
             }
 
-            #nav-menu {
+            nav ul {
                 display: none;
                 flex-direction: column;
                 gap: 15px;
             }
 
-            #nav-menu.nav-open {
+            nav.nav-open ul {
                 display: flex;
             }
 
@@ -208,76 +205,92 @@
 <body>
 
     <!-- HEADER -->
-    <header class="site-header">
+    <header>
 
         <h1>E-Sport Championship</h1>
 
         <!-- Tombol Hamburger -->
-        <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Buka menu">
+        <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Buka menu" aria-expanded="false">
             ☰
         </button>
 
-        <!-- Menu Navigasi -->
+        <!-- NAVBAR -->
         <nav id="nav-menu">
 
-            <a href="index.html">
-                Beranda
-            </a>
+            <ul>
 
-            <a href="esport/list.html">
-                Daftar Divisi
-            </a>
+                <!-- SUDAH DIPERBAIKI -->
+                <li>
+                    <a href="index.html">
+                        Beranda
+                    </a>
+                </li>
 
-            <a href="esport/tambah.html">
-                Tambah Divisi
-            </a>
+                <li>
+                    <a href="jobsheet-05/esport/list.html">
+                        Daftar Divisi
+                    </a>
+                </li>
 
-            <a href="anggota/list.html">
-                Daftar Anggota
-            </a>
+                <li>
+                    <a href="jobsheet-05/esport/tambah.html">
+                        Tambah Divisi
+                    </a>
+                </li>
 
-            <a href="anggota/tambah.html">
-                Tambah Anggota
-            </a>
+                <li>
+                    <a href="jobsheet-05/anggota/list.html">
+                        Daftar Anggota
+                    </a>
+                </li>
+
+                <li>
+                    <a href="jobsheet-05/anggota/tambah.html">
+                        Tambah Anggota
+                    </a>
+                </li>
+
+            </ul>
 
         </nav>
 
     </header>
 
 
-    <!-- ISI -->
+    <!-- MAIN -->
     <main>
 
-        <section class="statistics">
+        <section id="ringkasan">
 
             <h2>
                 Ringkasan Statistik
             </h2>
 
-            <div class="stat-card">
 
-                <span>
-                    TOTAL DIVISI GAME
-                </span>
+            <article id="stat-divisi">
 
-                <strong>
+                <h3>
+                    Total Divisi Game
+                </h3>
+
+                <p>
                     4 Divisi
-                </strong>
+                </p>
 
-            </div>
+            </article>
 
 
-            <div class="stat-card">
+            <article id="stat-anggota">
 
-                <span>
-                    TOTAL ANGGOTA PLAYER
-                </span>
+                <h3>
+                    Total Anggota Player
+                </h3>
 
-                <strong>
+                <p>
                     20 Player
-                </strong>
+                </p>
 
-            </div>
+            </article>
 
         </section>
 
@@ -292,7 +305,7 @@
     </footer>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- JAVASCRIPT HAMBURGER -->
     <script>
 
         const navToggle = document.getElementById("nav-toggle");
@@ -301,6 +314,12 @@
         navToggle.addEventListener("click", function () {
 
             navMenu.classList.toggle("nav-open");
+
+            const isOpen = navMenu.classList.contains("nav-open");
+
+            navToggle.setAttribute("aria-expanded", isOpen);
+
+            navToggle.textContent = isOpen ? "✕" : "☰";
 
         });
 
