@@ -1,0 +1,32 @@
+[
+    {
+        "kode": "D001",
+        "nama_game": "Mobile Legends",
+        "platform": "Mobile",
+        "roster": 6
+    },
+    {
+        "kode": "D002",
+        "nama_game": "Valorant",
+        "platform": "PC",
+        "roster": 5
+    },
+    {
+        "kode": "D003",
+        "nama_game": "PUBG Mobile",
+        "platform": "Mobile",
+        "roster": 5
+    },
+    {
+        "kode": "D004",
+        "nama_game": "Dota 2",
+        "platform": "PC",
+        "roster": 5
+    },
+    {
+        "kode": "D005",
+        "nama_game": "Free Fire",
+        "platform": "Mobile",
+        "roster": 4
+    }
+]

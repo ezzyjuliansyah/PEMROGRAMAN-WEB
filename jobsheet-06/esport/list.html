@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Divisi - E-Sport</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>E-Sport Championship</h1>
+        <button type="button" class="nav-toggle-label" aria-label="Buka menu" aria-expanded="false">☰</button>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="list.html">Daftar Divisi</a></li>
+                <li><a href="tambah.html">Tambah Divisi</a></li>
+                <li><a href="../anggota/list.html">Daftar Anggota</a></li>
+                <li><a href="../anggota/tambah.html">Tambah Anggota</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Daftar Divisi Game</h2>
+            <div class="search-box">
+                <label for="search-tabel-divisi">🔎 Cari data:</label>
+                <input type="search" id="search-tabel-divisi" data-table-search="tabel-divisi" placeholder="Cari kode divisi, nama game, atau platform..." autocomplete="off">
+            </div>
+            <div class="table-responsive">
+                <table border="1" id="tabel-divisi">
+                    <thead>
+                        <tr>
+                            <th>Kode Divisi</th>
+                            <th>Nama Game</th>
+                            <th>Platform</th>
+                            <th>Jumlah Roster</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabel-divisi-body">
+                        <tr id="loading-indicator">
+                            <td colspan="5">⏳ Memuat data divisi...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 E-Sport Championship &mdash; Jobsheet 6</p>
+    </footer>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/esport.js"></script>
+</body>
+
+</html>
