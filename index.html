@@ -2,329 +2,45 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>E-Sport Championship — Jobsheet 5</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 20px 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f3f5f8;
-            color: #1f2937;
-        }
-
-        /* ================= HEADER ================= */
-
-        header {
-            background: #1e293b;
-            color: white;
-            padding: 30px 25px;
-            border-radius: 8px;
-            margin-bottom: 22px;
-            position: relative;
-        }
-
-        header h1 {
-            text-align: center;
-            font-size: 38px;
-            margin: 0 0 50px;
-        }
-
-        /* ================= HAMBURGER ================= */
-
-        .nav-toggle {
-            position: absolute;
-            left: 26px;
-            bottom: 54px;
-
-            width: 46px;
-            height: 43px;
-
-            border: none;
-            border-radius: 5px;
-
-            background: #0796d7;
-            color: white;
-
-            font-size: 22px;
-            cursor: pointer;
-        }
-
-        .nav-toggle:hover {
-            background: #087fb5;
-        }
-
-        /* ================= NAVBAR ================= */
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav a {
-            color: #10aef0;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: white;
-        }
-
-        /* ================= MAIN ================= */
-
-        main {
-            background: white;
-            border-radius: 8px;
-            padding: 38px 22px;
-
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        #ringkasan {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 22px;
-        }
-
-        #ringkasan h2 {
-            margin: 5px 0;
-            font-size: 28px;
-            color: #27364a;
-        }
-
-        /* ================= STATISTIK ================= */
-
-        #ringkasan article {
-            background: #f8fafc;
-
-            border: 1px solid #dce5ef;
-            border-left: 5px solid #0796d7;
-
-            border-radius: 6px;
-
-            padding: 20px 18px;
-        }
-
-        #ringkasan article h3 {
-            color: #63758c;
-
-            font-size: 15px;
-            text-transform: uppercase;
-
-            margin: 0 0 10px;
-        }
-
-        #ringkasan article p {
-            color: #0b1930;
-
-            font-size: 28px;
-            font-weight: bold;
-
-            margin: 0;
-        }
-
-        /* ================= FOOTER ================= */
-
-        footer {
-            text-align: center;
-
-            margin-top: 35px;
-
-            color: #58708d;
-
-            font-size: 15px;
-        }
-
-        /* ================= MOBILE ================= */
-
-        @media (max-width: 900px) {
-
-            nav ul {
-                gap: 20px;
-            }
-
-            nav a {
-                font-size: 16px;
-            }
-
-            #ringkasan {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-        @media (max-width: 600px) {
-
-            body {
-                padding: 10px;
-            }
-
-            header {
-                padding: 25px 15px;
-            }
-
-            header h1 {
-                font-size: 28px;
-                margin-bottom: 25px;
-            }
-
-            .nav-toggle {
-                position: static;
-                margin-bottom: 20px;
-            }
-
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav.nav-open ul {
-                display: flex;
-            }
-
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Sport Championship</title>
+    <link rel="stylesheet" href="jobsheet-06/assets/css/style.css">
 </head>
 
 <body>
-
-    <!-- HEADER -->
     <header>
-
         <h1>E-Sport Championship</h1>
-
-        <!-- Tombol Hamburger -->
-        <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Buka menu" aria-expanded="false">
-            ☰
-        </button>
-
-        <!-- NAVBAR -->
-        <nav id="nav-menu">
-
+        <button type="button" class="nav-toggle-label" aria-label="Buka menu" aria-expanded="false">☰</button>
+        <nav>
             <ul>
-
-                <!-- SUDAH DIPERBAIKI -->
-                <li>
-                    <a href="index.html">
-                        Beranda
-                    </a>
-                </li>
-
-                <li>
-                    <a href="jobsheet-05/esport/list.html">
-                        Daftar Divisi
-                    </a>
-                </li>
-
-                <li>
-                    <a href="jobsheet-05/esport/tambah.html">
-                        Tambah Divisi
-                    </a>
-                </li>
-
-                <li>
-                    <a href="jobsheet-05/anggota/list.html">
-                        Daftar Anggota
-                    </a>
-                </li>
-
-                <li>
-                    <a href="jobsheet-05/anggota/tambah.html">
-                        Tambah Anggota
-                    </a>
-                </li>
-
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="jobsheet-06/esport/list.html">Daftar Divisi</a></li>
+                <li><a href="jobsheet-06/esport/tambah.html">Tambah Divisi</a></li>
+                <li><a href="jobsheet-06/anggota/list.html">Daftar Anggota</a></li>
+                <li><a href="jobsheet-06/anggota/tambah.html">Tambah Anggota</a></li>
             </ul>
-
         </nav>
-
     </header>
 
-
-    <!-- MAIN -->
     <main>
-
         <section id="ringkasan">
-
-            <h2>
-                Ringkasan Statistik
-            </h2>
-
-
+            <h2>Ringkasan Statistik</h2>
             <article id="stat-divisi">
-
-                <h3>
-                    Total Divisi Game
-                </h3>
-
-                <p>
-                    4 Divisi
-                </p>
-
+                <h3>Total Divisi Game</h3>
+                <p>4 Divisi</p>
             </article>
-
-
             <article id="stat-anggota">
-
-                <h3>
-                    Total Anggota Player
-                </h3>
-
-                <p>
-                    20 Player
-                </p>
-
+                <h3>Total Anggota Player</h3>
+                <p>20 Player</p>
             </article>
-
         </section>
-
     </main>
 
-
-    <!-- FOOTER -->
     <footer>
-
-        © 2026 E-Sport Championship — Jobsheet 5
-
+        <p>&copy; 2026 E-Sport Championship &mdash; Jobsheet 6</p>
     </footer>
-
-
-    <!-- JAVASCRIPT HAMBURGER -->
-    <script>
-
-        const navToggle = document.getElementById("nav-toggle");
-        const navMenu = document.getElementById("nav-menu");
-
-        navToggle.addEventListener("click", function () {
-
-            navMenu.classList.toggle("nav-open");
-
-            const isOpen = navMenu.classList.contains("nav-open");
-
-            navToggle.setAttribute("aria-expanded", isOpen);
-
-            navToggle.textContent = isOpen ? "✕" : "☰";
-
-        });
-
-    </script>
-
+    <script src="jobsheet-06/assets/js/app.js"></script>
 </body>
 
 </html>
