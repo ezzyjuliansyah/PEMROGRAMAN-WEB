@@ -1,32 +1,278 @@
+/*
+=========================================================
+E-SPORT CHAMPIONSHIP - BOOTSTRAP THEME
+Jobsheet 3
+=========================================================
+Bootstrap 5.3.3 is loaded by the HTML files.
+This stylesheet only customizes Bootstrap components and
+does not change the HTML/JS/data structure.
+*/
+
 :root {
-    --brand-navy: #1e293b;
-    --brand-cyan: #38bdf8;
-    --brand-blue: #0284c7;
+    --bs-dark: #18181b;
+    --bs-dark-rgb: 24, 24, 27;
+    --es-dark: #18181b;
+    --es-dark-2: #27272a;
+    --es-gold: #eab308;
+    --es-gold-dark: #ca8a04;
+    --es-gold-light: #fde68a;
+    --es-bg: #f4f4f5;
+    --es-muted: #71717a;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--es-bg);
+    color: #27272a;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
 
 .navbar {
-    background-color: var(--brand-navy) !important;
+    background: var(--es-dark) !important;
+    padding: 1.15rem 1rem !important;
+    border-bottom: 1px solid #303034;
 }
 
-.navbar-brand,
+.navbar .container-fluid {
+    max-width: 1180px;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-size: 1.35rem;
+    letter-spacing: .3px;
+}
+
+.navbar-brand::before {
+    content: "⚡ ";
+    color: var(--es-gold);
+}
+
+.navbar-nav {
+    gap: .25rem;
+}
+
 .nav-link {
-    color: var(--brand-cyan) !important;
+    color: var(--es-gold) !important;
+    font-weight: 600;
+    padding: .5rem .75rem !important;
+    border-radius: .375rem;
+    transition: all .2s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(234, 179, 8, .15);
     color: #fff !important;
 }
 
+.navbar-toggler {
+    border-color: rgba(234, 179, 8, .55) !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 .2rem rgba(234, 179, 8, .2) !important;
+}
+
+.navbar-toggler-icon {
+    filter: sepia(1) saturate(3);
+}
+
+/* ================= MAIN ================= */
+
+main.container {
+    width: 100%;
+    max-width: 960px;
+    flex: 1;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.card {
+    border: 0 !important;
+    border-radius: .5rem !important;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .07) !important;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 1.5rem 1.75rem;
+}
+
+.card-title {
+    color: var(--es-dark);
+    font-size: 1.45rem;
+    font-weight: 700;
+    padding-bottom: .75rem;
+    margin-bottom: 1rem !important;
+    border-bottom: 3px solid var(--es-gold);
+}
+
+/* ================= STATISTICS ================= */
+
 .stat-card {
-    border-left: 4px solid var(--brand-blue);
+    background: var(--es-bg) !important;
+    border-left: 4px solid var(--es-gold);
+    border-radius: .375rem !important;
+    padding: 1rem 1.15rem !important;
+    min-height: 100px;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, .08);
+}
+
+.stat-card .text-muted {
+    color: var(--es-muted) !important;
+    font-weight: 700;
+    letter-spacing: .4px;
+}
+
+.stat-card .fs-3 {
+    color: var(--es-dark);
+}
+
+/* ================= TABLE ================= */
+
+.table-responsive {
+    border-radius: .375rem;
+}
+
+.table {
+    margin-bottom: 0 !important;
+    border-color: #e4e4e7;
+}
+
+.table thead th {
+    background: var(--es-dark) !important;
+    color: var(--es-gold-light) !important;
+    border-color: var(--es-dark) !important;
+    font-weight: 700;
+    padding: .7rem;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: .7rem;
+    vertical-align: middle;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #fafafa;
+}
+
+.table-hover > tbody > tr:hover > * {
+    background-color: #fff9df;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+    border-radius: .375rem !important;
+    font-weight: 600;
+    transition: .2s ease;
 }
 
 .btn-primary {
-    background-color: var(--brand-blue);
-    border-color: var(--brand-blue);
+    --bs-btn-bg: var(--es-gold);
+    --bs-btn-border-color: var(--es-gold);
+    --bs-btn-hover-bg: var(--es-gold-dark);
+    --bs-btn-hover-border-color: var(--es-gold-dark);
+    --bs-btn-active-bg: var(--es-gold-dark);
+    --bs-btn-active-border-color: var(--es-gold-dark);
+    color: #18181b !important;
 }
 
-.btn-primary:hover {
-    background-color: #0369a1;
-    border-color: #0369a1;
+.btn-warning {
+    color: #18181b !important;
+    font-weight: 700;
+}
+
+.btn-danger {
+    font-weight: 700;
+}
+
+/* ================= FORM ================= */
+
+.form-label {
+    color: #27272a;
+    font-weight: 600;
+    font-size: .9rem;
+    margin-bottom: .35rem;
+}
+
+.form-control {
+    border-color: #d4d4d8;
+    border-radius: .375rem;
+    padding: .6rem .75rem;
+}
+
+.form-control:focus {
+    border-color: var(--es-gold);
+    box-shadow: 0 0 0 .2rem rgba(234, 179, 8, .2);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: var(--es-dark) !important;
+    color: var(--es-gold-light) !important;
+    margin-top: auto;
+    border-top: 1px solid #303034;
+}
+
+footer p {
+    color: var(--es-gold-light) !important;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding-top: .75rem;
+        gap: .15rem;
+    }
+
+    .nav-link {
+        padding-left: .75rem !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    main.container {
+        padding-left: .75rem;
+        padding-right: .75rem;
+    }
+
+    .card-body {
+        padding: 1.15rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .navbar {
+        padding: .9rem .75rem !important;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .table {
+        font-size: .9rem;
+    }
 }
