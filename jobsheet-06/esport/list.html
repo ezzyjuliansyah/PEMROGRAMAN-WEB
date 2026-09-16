@@ -9,26 +9,29 @@
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <h1>E-Sport Championship</h1>
-        <button type="button" class="nav-toggle-label" aria-label="Buka menu" aria-expanded="false">☰</button>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Beranda</a></li>
-                <li><a href="list.html">Daftar Divisi</a></li>
-                <li><a href="tambah.html">Tambah Divisi</a></li>
-                <li><a href="../anggota/list.html">Daftar Anggota</a></li>
-                <li><a href="../anggota/tambah.html">Tambah Anggota</a></li>
-            </ul>
-        </nav>
+        <p class="site-subtitle">Web Pengelola Data Divisi &amp; Anggota E-Sport</p>
     </header>
 
+    <button type="button" class="nav-toggle-label" aria-label="Buka menu" aria-expanded="false">☰</button>
+    <nav class="site-nav">
+        <ul>
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="list.html" class="active">Daftar Divisi</a></li>
+            <li><a href="tambah.html">Tambah Divisi</a></li>
+            <li><a href="../anggota/list.html">Daftar Anggota</a></li>
+            <li><a href="../anggota/tambah.html">Tambah Anggota</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section>
+        <div class="content-card">
             <h2>Daftar Divisi Game</h2>
             <div class="search-box">
                 <label for="search-tabel-divisi">🔎 Cari data:</label>
-                <input type="search" id="search-tabel-divisi" data-table-search="tabel-divisi" placeholder="Cari kode divisi, nama game, atau platform..." autocomplete="off">
+                <input type="search" id="search-tabel-divisi" data-table-search="tabel-divisi"
+                    placeholder="Cari kode divisi, nama game, atau platform..." autocomplete="off">
             </div>
             <div class="table-responsive">
                 <table border="1" id="tabel-divisi">
@@ -48,12 +51,13 @@
                     </tbody>
                 </table>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 E-Sport Championship &mdash; Jobsheet 6</p>
+        <p>&copy; 2026 E-Sport Championship</p>
     </footer>
+
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/esport.js"></script>
 </body>

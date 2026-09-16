@@ -9,32 +9,36 @@
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <h1>E-Sport Championship</h1>
-        <button type="button" class="nav-toggle-label" aria-label="Buka menu" aria-expanded="false">☰</button>
-        <nav>
-            <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="esport/list.html">Daftar Divisi</a></li>
-                <li><a href="esport/tambah.html">Tambah Divisi</a></li>
-                <li><a href="anggota/list.html">Daftar Anggota</a></li>
-                <li><a href="anggota/tambah.html">Tambah Anggota</a></li>
-            </ul>
-        </nav>
+        <p class="site-subtitle">Web Pengelola Data Divisi &amp; Anggota E-Sport</p>
     </header>
 
+    <button type="button" class="nav-toggle-label" aria-label="Buka menu" aria-expanded="false">☰</button>
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="esport/list.html">Daftar Divisi</a></li>
+            <li><a href="esport/tambah.html">Tambah Divisi</a></li>
+            <li><a href="anggota/list.html">Daftar Anggota</a></li>
+            <li><a href="anggota/tambah.html">Tambah Anggota</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section id="ringkasan">
+        <div class="content-card">
             <h2>Ringkasan Statistik</h2>
-            <article id="stat-divisi">
-                <h3>Total Divisi Game</h3>
-                <p>4 Divisi</p>
-            </article>
-            <article id="stat-anggota">
-                <h3>Total Anggota Player</h3>
-                <p>20 Player</p>
-            </article>
-        </section>
+            <div class="stat-grid">
+                <div class="stat-box">
+                    <div class="stat-label">Total Divisi Game</div>
+                    <div class="stat-value">4 Divisi</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Total Anggota Player</div>
+                    <div class="stat-value">20 Player</div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>

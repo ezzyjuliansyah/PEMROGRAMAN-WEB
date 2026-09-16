@@ -9,49 +9,51 @@
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <h1>E-Sport Championship</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Beranda</a></li>
-                <li><a href="../esport/list.html">Daftar Divisi</a></li>
-                <li><a href="../esport/tambah.html">Tambah Divisi</a></li>
-                <li><a href="list.html">Daftar Anggota</a></li>
-                <li><a href="tambah.html">Tambah Anggota</a></li>
-            </ul>
-        </nav>
+        <p class="site-subtitle">Web Pengelola Data Divisi &amp; Anggota E-Sport</p>
     </header>
 
+    <nav class="site-nav">
+        <ul>
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="../esport/list.html">Daftar Divisi</a></li>
+            <li><a href="../esport/tambah.html">Tambah Divisi</a></li>
+            <li><a href="list.html">Daftar Anggota</a></li>
+            <li><a href="tambah.html">Tambah Anggota</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section>
+        <div class="content-card">
             <h2>Form Tambah Anggota Player</h2>
             <form action="#" method="post" id="form-anggota">
-                <p>
-                    <label for="no_anggota">No. Anggota:</label><br />
+                <div>
+                    <label for="no_anggota">No. Anggota:</label>
                     <input type="text" id="no_anggota" name="no_anggota" required />
-                </p>
-                <p>
-                    <label for="nama">Nama Player:</label><br />
+                </div>
+                <div>
+                    <label for="nama">Nama Player:</label>
                     <input type="text" id="nama" name="nama" required />
-                </p>
-                <p>
-                    <label for="role">Role / Posisi:</label><br />
+                </div>
+                <div>
+                    <label for="role">Role / Posisi:</label>
                     <input type="text" id="role" name="role" />
-                </p>
-                <p>
-                    <label for="no_hp">No. HP:</label><br />
+                </div>
+                <div>
+                    <label for="no_hp">No. HP:</label>
                     <input type="tel" id="no_hp" name="no_hp" />
-                </p>
-                <p>
+                </div>
+                <div>
                     <button type="submit" id="btn-simpan-anggota">Simpan</button>
                     <button type="reset" id="btn-reset-anggota">Reset</button>
-                </p>
+                </div>
             </form>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 E-Sport Championship &mdash; Jobsheet 1</p>
+        <p>&copy; 2026 E-Sport Championship &mdash; Jobsheet 2</p>
     </footer>
 </body>
 

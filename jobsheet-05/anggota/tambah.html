@@ -9,22 +9,24 @@
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <h1>E-Sport Championship</h1>
-        <button type="button" class="nav-toggle-label" aria-label="Buka menu" aria-expanded="false">☰</button>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Beranda</a></li>
-                <li><a href="../esport/list.html">Daftar Divisi</a></li>
-                <li><a href="../esport/tambah.html">Tambah Divisi</a></li>
-                <li><a href="list.html">Daftar Anggota</a></li>
-                <li><a href="tambah.html">Tambah Anggota</a></li>
-            </ul>
-        </nav>
+        <p class="site-subtitle">Web Pengelola Data Divisi &amp; Anggota E-Sport</p>
     </header>
 
+    <button type="button" class="nav-toggle-label" aria-label="Buka menu" aria-expanded="false">☰</button>
+    <nav class="site-nav">
+        <ul>
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="../esport/list.html">Daftar Divisi</a></li>
+            <li><a href="../esport/tambah.html">Tambah Divisi</a></li>
+            <li><a href="list.html">Daftar Anggota</a></li>
+            <li><a href="tambah.html" class="active">Tambah Anggota</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section>
+        <div class="content-card">
             <h2>Form Tambah Anggota Player</h2>
             <form action="#" method="post" id="form-anggota">
                 <div>
@@ -48,7 +50,7 @@
                     <button type="reset" id="btn-reset-anggota">Reset</button>
                 </div>
             </form>
-        </section>
+        </div>
     </main>
 
     <footer>
