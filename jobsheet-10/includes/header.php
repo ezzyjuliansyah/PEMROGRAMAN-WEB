@@ -1,7 +1,5 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+require_once __DIR__ . '/session.php';
 
 $base = $base ?? '';
 $pageTitle = $pageTitle ?? 'E-Sport Championship';
@@ -35,7 +33,6 @@ function e($value)
             <li><a href="<?= $base ?>esport/tambah.php" class="<?= $activePage === 'divisi-tambah' ? 'active' : '' ?>">Tambah Divisi</a></li>
             <li><a href="<?= $base ?>anggota/list.php" class="<?= $activePage === 'anggota-list' ? 'active' : '' ?>">Daftar Anggota</a></li>
             <li><a href="<?= $base ?>anggota/tambah.php" class="<?= $activePage === 'anggota-tambah' ? 'active' : '' ?>">Tambah Anggota</a></li>
-
             <?php if (isset($_SESSION['user_id'])): ?>
                 <li class="nav-user">Halo, <?= e($_SESSION['user_nama']) ?></li>
                 <li><a href="<?= $base ?>auth/logout.php">Logout</a></li>

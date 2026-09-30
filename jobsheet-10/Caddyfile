@@ -1,0 +1,10 @@
+:{$PORT:80} {
+    root * /app
+    encode zstd gzip
+
+    # Folder includes/ hanya untuk di-include oleh PHP, bukan untuk dibuka lewat URL
+    @private path /includes/*
+    respond @private 404
+
+    php_server
+}

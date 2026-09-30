@@ -4,13 +4,11 @@
 // halaman yang dikunci, supaya header('Location: ...') masih bisa dipanggil
 // sebelum ada output HTML.
 //
-// File ini sengaja TIDAK memanggil koneksi.php: guard berjalan sebelum kode
-// yang butuh koneksi database, jadi halaman terkunci tetap redirect ke Login
-// meski database belum tersambung.
+// Dengan session file (lokal), guard berjalan tanpa koneksi database, jadi
+// halaman terkunci tetap redirect ke Login meski database belum tersambung.
+// (Kalau SESSION_DRIVER=db di Vercel, session sendiri memang disimpan di database.)
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+require_once __DIR__ . '/session.php';
 
 // $base diisi oleh halaman pemanggil ('../' untuk halaman di dalam subfolder),
 // jadi redirect ke Login otomatis relatif terhadap posisi halaman.

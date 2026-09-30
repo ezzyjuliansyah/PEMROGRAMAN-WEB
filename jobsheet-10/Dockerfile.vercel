@@ -1,13 +1,17 @@
-FROM php:8.2-apache
+FROM dunglas/frankenphp:1-php8.4-alpine
 
-RUN docker-php-ext-install pdo pdo_pgsql
+# Driver PostgreSQL untuk PDO (dipakai includes/db.php)
+RUN install-php-extensions pdo_pgsql
 
-COPY . /var/www/html/
+WORKDIR /app
 
-RUN chown -R www-data:www-data /var/www/html
+COPY Caddyfile /etc/caddy/Caddyfile
+COPY index.php ./index.php
+COPY includes ./includes
+COPY assets ./assets
+COPY esport ./esport
+COPY anggota ./anggota
+COPY auth ./auth
 
-RUN a2enmod rewrite
-
-EXPOSE 80
-
-CMD ["apache2-foreground"]
+ENV PORT=80
+CMD ["frankenphp", "run", "--config", "/etc/caddy/Caddyfile"]
