@@ -56,13 +56,8 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
 
         <form action="list.php" method="get" class="search-box">
             <label for="search-input">🔎 Cari data (server, semua halaman):</label>
-            <!--
-                CATATAN (sengaja, lihat Jobsheet 9 poin Catatan):
-                Nilai $q di bawah ini SENGAJA ditampilkan balik ke value=
-                TANPA htmlspecialchars/e(). Ini belum aman terhadap XSS -
-                audit & perbaikan menyeluruh dilakukan di Jobsheet 11.
-            -->
-            <input type="search" id="search-input" name="q" value="<?= $q ?>"
+            <!-- Jobsheet 11: nilai $q sekarang di-escape dengan e() (anti-XSS) -->
+            <input type="search" id="search-input" name="q" value="<?= e($q) ?>"
                 placeholder="Cari kode divisi, nama game, atau platform...">
             <button type="submit">Cari</button>
             <?php if ($q !== ''): ?>
@@ -101,6 +96,7 @@ $totalPages = max(1, (int) ceil($totalRows / $perPage));
                                     <td class="aksi-cell">
                                         <a href="edit.php?id=<?= (int) $divisi['id'] ?>" class="btn-edit">Edit</a>
                                         <form action="hapus.php" method="post" class="form-hapus">
+                                            <?= csrf_field() ?>
                                             <input type="hidden" name="id" value="<?= (int) $divisi['id'] ?>">
                                             <button type="submit" class="btn-hapus">Hapus</button>
                                         </form>
