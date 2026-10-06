@@ -1,0 +1,36 @@
+<?php
+$base = '../';
+require __DIR__ . '/../includes/auth.php'; // guard (sekaligus memulai session)
+require_once __DIR__ . '/../includes/csrf.php';
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: list.php');
+    exit;
+}
+
+// Jobsheet 11: tolak request tanpa token CSRF yang valid SEBELUM menyentuh database
+csrf_verify();
+require __DIR__ . '/../includes/koneksi.php';
+
+$id = (int) ($_POST['id'] ?? 0);
+
+if ($id > 0) {
+    try {
+        $stmt = $pdo->prepare('DELETE FROM anggota WHERE id = :id');
+        $stmt->execute(['id' => $id]);
+
+        $_SESSION['flash'] = ['type' => 'success', 'message' => 'Data anggota berhasil dihapus.'];
+    } catch (PDOException $e) {
+        // 23503 = foreign key violation: data masih dipakai tabel peminjaman (Jobsheet 12)
+        if ($e->getCode() === '23503') {
+            $_SESSION['flash'] = ['type' => 'error', 'message' => 'Data anggota tidak bisa dihapus karena masih punya riwayat peminjaman.'];
+        } else {
+            throw $e;
+        }
+    }
+} else {
+    $_SESSION['flash'] = ['type' => 'error', 'message' => 'Data tidak valid.'];
+}
+
+header('Location: list.php');
+exit;
