@@ -231,7 +231,8 @@ footer {
     }
 
     .nav-toggle-label {
-        display: block;
+        align-items: start;
+        display: flex;
         text-align: right;
         cursor: pointer;
         font-size: 1.8rem;

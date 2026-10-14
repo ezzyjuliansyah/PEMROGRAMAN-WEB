@@ -72,17 +72,19 @@ nav.site-nav a.active {
 
 /* ===== Hamburger (mobile) ===== */
 .nav-toggle-label {
-    display: none;
+    justify-content: start;
+    align-items: start;
+    display: flex;
     background-color: var(--brand-gold);
     color: var(--brand-dark);
     border: none;
-    padding: 8px 14px;
     border-radius: 4px;
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    margin: 10px auto;
+    margin: 10px;
 }
+
 
 @media (max-width: 600px) {
     .nav-toggle-label {
