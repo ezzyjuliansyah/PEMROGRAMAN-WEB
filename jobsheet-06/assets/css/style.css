@@ -74,7 +74,7 @@ nav.site-nav a.active {
 .nav-toggle-label {
     justify-content: start;
     align-items: start;
-    display: flex;
+    display: none;
     background-color: var(--brand-gold);
     color: var(--brand-dark);
     border: none;
@@ -84,8 +84,6 @@ nav.site-nav a.active {
     cursor: pointer;
     margin: 10px;
 }
-
-
 @media (max-width: 600px) {
     .nav-toggle-label {
         display: block;
